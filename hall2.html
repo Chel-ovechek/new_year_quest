@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('background.avif');
+            background-size: 100%;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: antiquewhite;
+            text-align: center;
+            margin: 0%;
+        }
+
+        #head{
+            background-color: rgba(203, 18, 18, 90%);
+            font-size:50pt;
+            padding: 10px;
+        }
+
+        h1{
+            background-color: rgb(140, 167, 158);
+            font-size: 40pt;
+            padding: 10px;
+        }
+
+        #content{
+            width: 65%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #text{
+            background-color: rgba(206, 0, 55, 0.9);
+            font-size:30pt;
+            padding: 10px;
+        }
+        #rules{
+            background-color: rgba(90, 0, 0, 0.9);
+            font-size:30pt;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        #button{
+            background-color: rgba(203, 18, 18, 90%);
+            font-size:30pt;
+            color: antiquewhite;
+            padding: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            width: 50%;
+        }
+
+        .image-wrapper {
+            position: relative;
+            margin: 20px auto;
+            
+        }
+
+        .image-wrapper img {
+            width: 700px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        .box {
+            
+            background: rgba(63, 255, 92, 0);
+            position: absolute;
+            z-index: 2;
+        }
+        
+        #box0{width: 30px; height: 45px; top: 40%; left: 7%;}
+        #box1{width: 50px; height: 70px; top: 79%; left: 49%;}
+        #box2{width: 30px; height: 45px; top: 74%; left: 71%;}
+
+        .step {
+            display: none;
+        }
+
+        /* логика показа */
+        #s0:checked ~ #step1 {
+            display: block;
+        }
+
+        #s1:checked ~ #step2 {
+            display: block;
+        }
+
+        #s2:checked ~ #final {
+            display: block;
+        }
+
+        footer{
+            margin: 0%;
+            background-color: rgba(0, 0, 0, 0.542);
+            height: 50px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="head">Новогодний квест - бал Масок</header>
+
+    <div id="content">
+        <h1>Зал внимательности</h1>
+
+        <div id="text">Найди трех снеговиков на этой странице, чтобы отправиться дальше</div>
+
+        <div id="rules">Среди снежинок первый - нажми на него</div>
+        <!-- ===== ШАГ 1 ===== -->
+        <input type="checkbox" id="s0">
+        <div class="image-wrapper">
+            <img src="find_snowman.jpg">
+            <label for="s0" class="box" id="box0"></label>
+        </div>
+
+        <input type="checkbox" id="s1">
+        <div class="step" id="step1">
+            <div id="rules">Второй снеговик прячется у этой семейки</div>
+
+            <div class="image-wrapper">
+                <img src="find_snowman2.jpg">
+                <label for="s1" class="box" id="box1"></label>
+            </div>
+        </div>
+
+        <input type="checkbox" id="s2">
+        <div class="step" id="step2">
+            <div id="rules">Остался последний - у него не хватает одной пуговки!</div>
+
+            <div class="image-wrapper">
+                <img src="find_snowman3.jpg">
+                <label for="s2" class="box" id="box2"></label>
+            </div>
+        </div>
+
+        <div class="step" id="final">
+            <a id="button" href="hall3.html">Дальше</a>
+        </div>
+
+        <div id="final">
+            <a id="button" href="hall3.html">Пропустить</a>
+        </div>
+    </div>
+
+        
+        <br><br><br><br>
+    </div>
+    <footer>
+        <a href="https://t.me/Ignotustur"><img width="50px" src="tg.png" alt="telegram"></a>
+        <a href="https://vk.com/vpsyurnikov"><img width="50px" src="vk.png" alt="VK"></a>
+    </footer>
+</body>
+</html>

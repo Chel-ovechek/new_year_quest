@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url('background.avif');
+            background-size: 100%;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: antiquewhite;
+            text-align: center;
+            margin: 0%;
+        }
+
+        .snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .snow span {
+            position: absolute;
+            top: -10px;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(110vh);
+            }
+        }
+
+
+        .snow span:nth-child(1) {
+            left: 10%;
+            animation-duration: 10s;
+            animation-delay: 0s;
+        }
+
+        .snow span:nth-child(2) {
+            left: 20%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+            width: 6px;
+            height: 6px;
+        }
+
+        .snow span:nth-child(3) {
+            left: 30%;
+            animation-duration: 8s;
+            animation-delay: 1s;
+        }
+
+        .snow span:nth-child(4) {
+            left: 40%;
+            animation-duration: 14s;
+            animation-delay: 3s;
+        }
+
+        .snow span:nth-child(5) {
+            left: 50%;
+            animation-duration: 9s;
+            animation-delay: 0s;
+            width: 5px;
+            height: 5px;
+        }
+
+        .snow span:nth-child(6) {
+            left: 60%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .snow span:nth-child(7) {
+            left: 70%;
+            animation-duration: 13s;
+            animation-delay: 1s;
+        }
+
+        .snow span:nth-child(8) {
+            left: 80%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+
+        .snow span:nth-child(9) {
+            left: 90%;
+            animation-duration: 15s;
+            animation-delay: 0s;
+        }
+
+        .snow span:nth-child(10) {
+            left: 95%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        #head{
+            background-color: rgba(203, 18, 18, 90%);
+            font-size:50pt;
+        }
+
+        h1{
+            background-color: rgb(140, 167, 158);
+            font-size: 40pt;
+        }
+
+        #content{
+            width: 65%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        #text{
+            background-color: rgba(206, 0, 55, 0.9);
+            font-size:30pt;
+        }
+        #rules{
+            background-color: rgba(90, 0, 0, 0.9);
+            font-size:30pt;
+            text-align: left;
+            padding: 10px;
+        }
+        #button{
+            background-color: rgba(203, 18, 18, 90%);
+            font-size:30pt;
+            color: antiquewhite;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        #buttons{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+        }
+
+        footer{
+            margin: 0%;
+            background-color: rgba(0, 0, 0, 0.542);
+            height: 50px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="head">Новогодний квест - бал Масок</header>
+    <div class="snow">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        
+    </div>
+    <div id="content">
+        <h1>Зал снега</h1>
+
+        <div id="text">Здесь всегда холодно.<br>
+        Здесь всё падает медленно.<br>
+        Здесь некуда спешить.
+        </div>
+
+        <br>
+
+        <div id="text">Гости этого зала рассказывают о событиях прошедшей ночи.<br>
+        Они говорят вразнобой, перебивая друг друга,
+        и каждый уверен, что именно его момент был главным.
+        </div>
+        
+        <br>
+
+        <div id="rules">Реши загадку и сможешь продолжить свой путь <br><br>
+        Я существую, даже когда меня не считают.<br>
+        Я движусь, даже когда всё неподвижно.<br>
+        Я — причина ожидания и сожаления,<br>
+        но не имею ни желаний, ни памяти.<br>
+        Я превращаю возможности в воспоминания,<br>
+        а мгновения — в историю.<br>
+        Мне нельзя задать направление,<br>
+        но всё следует за мной.<br>
+        </div>
+
+        <br>
+
+        <div id="text">Снег не знает, что было раньше,<br>
+        и не помнит, что будет потом.<br><br>
+        Или всё-таки...
+        </div><br>
+
+        <div id="text">В каком зале ты находишься?</div>
+        <br><br>
+        <div id="buttons">
+            <a id="button" href="error.html">
+                <span >Снега</span>
+            </a>
+            <a id="button" href="error.html">
+                <span >Вечности</span>
+            </a>
+            <a id="button" href="error.html">
+                <span >Тишины</span>
+            </a>
+            <a id="button" href="hall2.html">
+                <span >Времени</span>
+            </a>
+            <a id="button" href="error.html">
+                <span > Света</span>
+            </a>
+            <a id="button" href="error.html">
+                <span >Зеркал</span>
+            </a>
+        </div>
+        <br><br><br><br>
+    </div>
+    <footer>
+        <a href="https://t.me/Ignotustur"><img width="50px" src="tg.png" alt="telegram"></a>
+        <a href="https://vk.com/vpsyurnikov"><img width="50px" src="vk.png" alt="VK"></a>
+    </footer>
+</body>
+</html>
